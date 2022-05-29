@@ -1,33 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>donut.js</title>
+    <meta charset="UTF-8" />
+    <style>
+      body,
+      html {
+        height: 100vh;
+        overflow: hidden;
+        background-color: black;
+        color: white;
+      }
 
-<head>
-	<title>donut.js</title>
-	<meta charset="UTF-8">
-	<style>
-		body, html {
-			height: 100vh;
-			overflow: hidden;
-			background-color: black;
-			color: white;
-		}
-		.center {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			cursor: pointer;
-		}
-		.hidden {
-			visibility: hidden;
-		}
-	</style>
-</head>
+      .hidden {
+        visibility: hidden;
+      }
 
-<body>
-	<input type="color" class="center hidden" id="colorPicker" >
-	<pre class="center" id="donut"></pre>
-	<script src="donut.js"></script>
-</body>
+      canvas {
+        width: 700px;
+        height: 500px;
+      }
 
+      pre {
+        margin: 2rem;
+      }
+
+      canvas,
+      pre {
+        height: 70%;
+        width: 100%;
+      }
+
+      div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+        height: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <canvas id="canvas"></canvas>
+      <pre id="donut"></pre>
+    </div>
+    <script src="donut.js"></script>
+  </body>
 </html>
