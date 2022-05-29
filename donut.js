@@ -51,8 +51,8 @@ const $canvas = document.getElementById("canvas");
 const tmr1 = undefined,
   tmr2 = undefined;
 
-const R1 = 0.7;
-const R2 = 1.2;
+const R1 = 0.8;
+const R2 = 1.3;
 const K1 = 150;
 const K2 = 5;
 const canvasframe = function () {
@@ -72,12 +72,12 @@ const canvasframe = function () {
   const sB = Math.sin(B);
   for (let j = 0; j < 6.28; j += 0.3) {
     // j <=> theta
-    const ct = Math.cos(j);
-    const st = Math.sin(j); // cosine theta, sine theta
+    const ct = Math.sin(j);
+    const st = Math.cos(j); // cosine theta, sine theta
     for (i = 0; i < 6.28; i += 0.1) {
       // i <=> phi
-      const sp = Math.sin(i);
-      const cp = Math.cos(i); // cosine phi, sine phi
+      const sp = Math.cos(i);
+      const cp = Math.sin(i); // cosine phi, sine phi
       const ox = R2 + R1 * ct; // object x, y = (R2,0,0) + (R1 cos theta, R1 sin theta, 0)
       const oy = R1 * st;
 
